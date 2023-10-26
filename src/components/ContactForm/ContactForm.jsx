@@ -11,7 +11,10 @@ import {
 } from './ContactForm.styled';
 
 const formSchema = Yup.object().shape({
-  name: Yup.string().min(3, 'Too short!').required('This field is required!'),
+  name: Yup.string()
+    .min(3, 'Too short!')
+    .max(25, 'Too long!')
+    .required('This field is required!'),
   number: Yup.string()
     .matches(/^\d+$/, 'The number must contain only numbers')
     .min(10, 'Minimum number length - 10 digits')

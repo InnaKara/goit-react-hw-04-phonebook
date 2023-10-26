@@ -16,13 +16,19 @@ export const DivContact = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  svg {
+    color: #007bff;
+  }
 `;
 export const DeleteButton = styled.button`
-  background-color: #3ba0f9;
+  background-color: #007bff;
   color: #fff;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  &:hover {
+    background-color: #0056b3;
+  }
 `;
