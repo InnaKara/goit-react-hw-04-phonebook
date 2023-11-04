@@ -32,7 +32,6 @@ export const ContactForm = ({ onAdd }) => {
         }}
         validationSchema={formSchema}
         onSubmit={(values, actions) => {
-          console.log(values);
           onAdd(values);
           actions.resetForm();
         }}
