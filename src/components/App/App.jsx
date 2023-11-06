@@ -6,11 +6,7 @@ import { Filter } from '../Filter/Filter';
 import { H1, H2, H3 } from './App.styled';
 
 const getInitialContacts = () => {
-  const savedContacts = localStorage.getItem('contact-list');
-  if (savedContacts !== null) {
-    return JSON.parse(savedContacts);
-  }
-  return [];
+  return JSON.parse(localStorage.getItem('contact-list')) || [];
 };
 
 export const App = () => {
